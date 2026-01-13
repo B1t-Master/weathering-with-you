@@ -1,0 +1,248 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  /* box-sizing: border-box; */
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  height: 100vh;
+  font-family: Helvetica, sans-serif;
+  --background: #f3f3f3;
+  --accents: #85bfdc;
+}
+
+form {
+  padding-top: -4rem;
+  height: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  gap: 0.5rem;
+  align-items: start;
+  justify-content: center;
+}
+input {
+  width: 24rem;
+
+  padding: 14px 16px;
+  font-size: 16px;
+  color: #0f2a3a;
+
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 10px;
+
+  outline: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+input::placeholder {
+  color: #6b9aa6;
+}
+
+input:focus {
+  box-shadow: 0 10px 25px rgba(8, 80, 120, 0.4);
+  transform: translateY(-1px);
+}
+button {
+  width: 4rem;
+  height: 3.3rem;
+  padding-top: 14px;
+  position: relative;
+  border: none;
+  background-color: white;
+  color: #212121;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* font-size: 20px;
+  font-weight: 600; */
+  /* gap: 10px; */
+  border-radius: 10px;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  overflow: hidden;
+}
+.title {
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 4rem;
+  opacity: 0.5;
+  color: #f3f3f3;
+}
+
+body {
+  background: linear-gradient(
+    to right,
+    #1fa2ff,
+    #12d8fa,
+    #a6ffcb
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  padding: 0 20% 0 20%;
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  gap: 3rem;
+}
+#weather-card {
+  background-color: rgba(299, 299, 299, 0.2);
+  color: #f3f3f3;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+
+  /* justify-self: center; */
+  align-self: center;
+  margin-bottom: 2rem;
+  height: 100%;
+  /* border: 1px solid black; */
+  border-radius: 20px;
+}
+img {
+  width: 8rem;
+  height: auto;
+}
+#header {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  /* vertical-align: middle; */
+  gap: 1.5rem;
+  justify-self: start;
+  flex: 0.7;
+}
+#header > div {
+  align-self: center;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+#weather-details {
+  display: flex;
+  gap: 2rem;
+  font-weight: 600;
+}
+
+#primary-details {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  /* gap: 1rem;
+  */
+  /* width: 100%; */
+}
+
+#primary-details > .condition {
+  margin-top: -16px;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.temperature {
+  font-size: 4em;
+}
+
+#footer {
+  margin-top: 2rem;
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+#secondary-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  text-align: center;
+  height: 100%;
+  gap: 8px;
+}
+.humidity {
+  height: 100%;
+  position: relative;
+  top: 23.5px;
+  justify-self: center;
+}
+
+.wind-speed {
+  height: 100%;
+}
