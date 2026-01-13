@@ -142,7 +142,7 @@ button {
   padding-top: 2rem;
   text-align: center;
   font-size: 4rem;
-  opacity: 0.5;
+  opacity: 0.8;
   color: #f3f3f3;
 }
 
@@ -160,6 +160,16 @@ body {
   flex-direction: column;
   /* justify-content: center; */
   gap: 3rem;
+}
+
+/* .visible {
+  display: block;
+} */
+
+.invisible {
+  /* height: 0px; */
+  visibility: hidden;
+  display: none;
 }
 #weather-card {
   background-color: rgba(299, 299, 299, 0.2);
@@ -223,7 +233,8 @@ img {
 
 #footer {
   margin-top: 2rem;
-  font-size: 1.2em;
+  text-overflow: ellipsis;
+  font-size: 1em;
   font-style: italic;
 }
 

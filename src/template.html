@@ -29,18 +29,18 @@
         </button>
       </form>
     </div>
-    <section id="weather-card">
+    <section id="weather-card" class="invisible">
       <div id="header">
         <img src="../public/day-cloudy.svg" alt="" />
-        <div>Kenya</div>
+        <div class="region">Kenya</div>
       </div>
       <div id="weather-details">
         <div id="primary-details">
-          <div class="temperature">20 &#176 </div>
+          <div class="temperature"><span id="temp">20</span> &#176</div>
           <div class="condition">cloudy</div>
         </div>
         <div id="secondary-details">
-          <div class="humidity">Humidity<br>70%</div> <div class="wind-speed"><br>Speed<br>51 kmph</div>
+          <div class="humidity">Humidity<br><div id="humidity">70%</div></div> <div class="wind-speed"><br>Speed<br><div id="speed">51 kmph</div></div>
                 </div>
         </div>
       <div id="footer">Feels like 17 degrees celsius</div>
